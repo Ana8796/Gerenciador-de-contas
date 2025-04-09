@@ -5,8 +5,8 @@ void main() {
   runApp(const MinhaBiblioteca());
 }
 
-class MinhaBiblioteca extends StatelessWidget {
-  const MinhaBiblioteca({super.key});
+class GerenciadordeContas extends StatelessWidget {
+  const GerenciadordeContas({super.key});
 
   @override
   Widget build(BuildContext context) {

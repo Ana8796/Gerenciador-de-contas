@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gerenciadordecontas/models/person.dart';
 import 'package:gerenciadordecontas/ui/styles/app_color.dart';
 import 'package:gerenciadordecontas/ui/widgets/person_widget.dart';
-import 'package:gerenciadordecontas/services/account_service.dart';
+import 'package:gerenciadordecontas/services/personservice.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

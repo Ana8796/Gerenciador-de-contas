@@ -9,9 +9,9 @@ class AccountWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180, // Aumentei a altura para melhor visualização
+      height: 180, 
       padding: const EdgeInsets.all(10),
-      margin: const EdgeInsets.only(bottom: 12), // Espaço entre os widgets
+      margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
         color: AppColors.primary,
         borderRadius: BorderRadius.circular(12),

@@ -2,10 +2,10 @@ import 'package:gerenciadordecontas/models/person.dart';
 
 class PersonService {
   Future<List<Person>> getAll() async {
-    // Simulando uma requisição assíncrona
+    
     await Future.delayed(const Duration(seconds: 1));
     
-    // Retornando pessoas mockadas - CORREÇÕES APLICADAS:
+    
     return [
       Person(
         id: "1",
@@ -23,7 +23,7 @@ class PersonService {
         lastName: "Carlos",
         number: "+558699998877",
         cpf: "12345678901",
-        imagePath: "assets/joao.png", // Corrigido para joao.png
+        imagePath: "assets/joao.png", 
         birthday: DateTime(1985, 7, 20),
         registeredAt: DateTime.now().subtract(const Duration(days: 15)),
       ),
@@ -42,6 +42,6 @@ class PersonService {
 
   Future<void> addPerson(Person newPerson) async {
     await Future.delayed(const Duration(seconds: 1));
-    // Lógica para adicionar pessoa (mantida como está)
+    
   }
 }

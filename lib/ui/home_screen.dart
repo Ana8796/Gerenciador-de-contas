@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.lightGrey,
-        title: const Text("Sistema de gestão de contas"),
+        title: const Text("Sistema gerenciador de contas"),
         actions: [
           IconButton(
             onPressed: () => {Navigator.pushReplacementNamed(context, "login")},

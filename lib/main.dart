@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gerenciadordecontas/ui/home_screen.dart';
 
+
+
 void main() {
   runApp(const GerenciadordeContas());
 }
@@ -15,7 +17,7 @@ class GerenciadordeContas extends StatelessWidget {
       routes: {
         "home": (context) => const HomeScreen(),
       },
-      
+      initialRoute: "home",
     );
   }
 }

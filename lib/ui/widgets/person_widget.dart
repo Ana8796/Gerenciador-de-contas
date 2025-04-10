@@ -9,8 +9,9 @@ class AccountWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 128,
-      padding: EdgeInsets.all(16),
+      height: 180, // Aumentei a altura para melhor visualização
+      padding: const EdgeInsets.all(10),
+      margin: const EdgeInsets.only(bottom: 12), // Espaço entre os widgets
       decoration: BoxDecoration(
         color: AppColors.primary,
         borderRadius: BorderRadius.circular(12),
@@ -18,25 +19,43 @@ class AccountWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "${person.name} ${person.lastName}",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              Text(person.imagePath),
-              Text("ID: ${person.id}"),
-              Text("Numero: ${person.number.toString()}"),
-              Text("cpf: ${person.cpf}"),
-              Text("Data de nascimento: ${person.birthday}"),
-              Text("Registrado em: ${person.registeredAt}"),
-            ],
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "${person.name} ${person.lastName}",
+                  style: const TextStyle(
+                    fontSize: 18, 
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text("ID: ${person.id}", style: const TextStyle(color: Colors.white70)),
+                Text("Telefone: ${person.number}", style: const TextStyle(color: Colors.white70)),
+                Text("CPF: ${(person.cpf)}", style: const TextStyle(color: Colors.white70)),
+                Text("Nascimento: ${(person.birthday)}", style: const TextStyle(color: Colors.white70)),
+                Text("Registrado em: ${(person.registeredAt)}", style: const TextStyle(color: Colors.white70)),
+              ],
+            ),
           ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
+          // Widget para exibir a imagem corretamente
+          ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: Image.asset(
+              person.imagePath,
+              width: 80,
+              height: 80,
+              fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) => const Icon(Icons.person, size: 80),
+            ),
+          ),
         ],
       ),
     );
   }
+
+
 }
